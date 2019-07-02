@@ -1,0 +1,8 @@
+requires 'LWP';
+requires 'LWP::UserAgent';
+requires 'LWP::Protocol::https';
+requires 'Mojolicious', '== 8.17';
+requires 'JSON::XS';
+requires 'XML::XML2JSON', '== 0.05';
+requires 'Symbol::Move';
+requires 'LWP::Simple';
