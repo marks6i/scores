@@ -9,7 +9,7 @@ COPY cpanfile /app
 
 RUN carton install
 
-COPY cmd /app
+COPY cmd.sh /app
 COPY  scores.psgi /app
 
-ENTRYPOINT ["bash", "/app/cmd"]
+ENTRYPOINT ["bash", "/app/cmd.sh"]
