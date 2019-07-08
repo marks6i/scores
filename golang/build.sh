@@ -1,1 +1,1 @@
-docker build --tag java/scores .
+docker build --tag golang/scores .
