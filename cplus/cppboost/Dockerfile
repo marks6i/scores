@@ -10,6 +10,7 @@ RUN apt-get update \
       && apt-get install -y \
         make \
         curl \
+        git \
       && apt-get install -y cmake
 
 RUN apt-get install -y \
