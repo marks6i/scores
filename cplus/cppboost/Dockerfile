@@ -20,8 +20,8 @@ RUN apt-get install -y \
 
 RUN mkdir -p /usr/local/src \
       && cd /usr/local/src \
-      && wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.gz \
-      && tar -zxvf boost_1_70_0.tar.gz \
-      && cd boost_1_70_0/ \
+      && wget https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz \
+      && tar -zxvf boost_1_71_0.tar.gz \
+      && cd boost_1_71_0/ \
       && ./bootstrap.sh \
       && ./b2 install
