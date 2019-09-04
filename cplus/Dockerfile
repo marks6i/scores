@@ -8,5 +8,9 @@ RUN mkdir ../served.build \
     && cd ../served.build \
     && cmake ../served \
     && make \
-    && cd ../served \
-    && cp lib/libserved.so /usr/local/lib/
+    && cd ../served
+
+COPY ./src /usr/src/scores
+WORKDIR /usr/src/scores
+
+#RUN g++ -I/usr/src/served/src -L/usr/src/served/lib -lserved scores.cpp -o scores
