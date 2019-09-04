@@ -13,4 +13,6 @@ RUN mkdir ../served.build \
 COPY ./src /usr/src/scores
 WORKDIR /usr/src/scores
 
-#RUN g++ -I/usr/src/served/src -L/usr/src/served/lib -lserved scores.cpp -o scores
+ENV LD_LIBRARY_PATH=/usr/src/served/lib
+RUN g++ -I/usr/local/src/boost_1_71_0 -I/usr/src/served/src scores.cpp -o scores \
+        -L/usr/local/lib -lboost_system -L/usr/src/served/lib -lserved -lpthread
